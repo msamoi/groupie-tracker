@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Groupie-Tracker</title>
+        <link rel="stylesheet" href="/static/css/style.css"/>
+    </head>
+    <body>
+    <header><h1 class="title">{{.Name}}</h1></header>
+    <div class="container">
+    <div class="flex-container">
+        <img src="{{.Image}}">
+        <p class="list">Created In: {{.CreationDate}}<br>
+        First Album: {{.FirstAlbum}}</p>
+    </div>
+    <div class="flex-container">
+        <h1 class="list">Members:</h1>
+        <h1 class="list">Concerts:</h1>
+    </div>
+    <div class="flex-container">
+        <p class="list">
+        {{range .Members}}
+            {{.}}<br>
+        {{end}}
+            </p>
+        <p class="list">
+            {{range $key, $val := .Relations}} {{$key}}:<br />
+
+            {{range $val2 := $val}} {{$val2}}<br />
+            {{end}} {{end}}
+        </p>
+    </div>
+        <a href="../"><button class="button">HOME</button></a>
+    </div>
+    </body>
+</html>

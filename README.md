@@ -1,0 +1,1 @@
+This is a project based on my friend's school assignment. At first I was simply helping him with some issues, but eventually I decided to create my own version for fun. It's nothing special, but it's a fun little Go/HTML/CSS project that I enjoyed working on.
